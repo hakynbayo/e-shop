@@ -1,2 +1,5 @@
 export {default as Home} from './Home/Home'
 export {default as Contact} from './contact/Contact'
+export {default as Login} from './auth/login'
+export {default as Register} from './auth/register'
+export {default as Reset} from './auth/reset'
