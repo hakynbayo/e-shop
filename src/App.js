@@ -7,13 +7,17 @@ import { Home, Contact, Login, Register, Reset } from "./pages/index";
 // Components
 import { Header, Footer } from "./components/index";
 
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+
+
 function App() {
   // const [first, setFirst]= useState("bayo")
   return (
     <>
       <BrowserRouter>
         <Header />
-
+        <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
