@@ -28,15 +28,13 @@ const Register = () => {
 
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    const user = userCredential.user;
     setIsLoading(false);
     toast.success("Registration Successful");
     navigate('/login')
   })
   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    toast.error(errorMessage);
+    error.message =("Error Creating User")
+    toast.error(error.message);
     setIsLoading(false);
     // ..
   });

@@ -8,7 +8,7 @@ import { Home, Contact, Login, Register, Reset } from "./pages/index";
 import { Header, Footer } from "./components/index";
 
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 
 function App() {

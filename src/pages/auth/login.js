@@ -28,15 +28,13 @@ const Login = () => {
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const user = userCredential.user;
         toast.success("Login Successful");
         setIsLoading(false);
         navigate("/");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        toast.error(errorMessage);
+        error.message = ("Error Logging In")
+        toast.error(error.message);
         setIsLoading(false);
       });
   };
@@ -46,13 +44,13 @@ const Login = () => {
     const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
   .then((result) => {
-    const user = result.user;
     toast.success("Login Successful");
     setIsLoading(false);
     navigate("/");
-    
   }).catch((error) => {
+    error.message = ("Error Logging In")
    toast.error(error.message);
+   navigate("/login");
   });
 }
 
